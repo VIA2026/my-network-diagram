@@ -1,32 +1,32 @@
 ```mermaid
 graph TD
     subgraph sase [Cato Cloud / Zscaler Zero Trust Exchange]
-        FWaaS[FWaaS / SWG]
-        CASB[CASB / DLP]
-        ZTNA[ZTNA]
+        FWaaS[fa:fa-shield-alt FWaaS / SWG]
+        CASB[fa:fa-lock CASB / DLP]
+        ZTNA[fa:fa-key ZTNA]
     end
 
     subgraph branch [東京/名古屋/大阪/九州拠点]
-        Edge[Cato Socket / Branch Connector]
-        Users[社内ユーザー]
-        Devices[複合機 / IoT]
+        Edge[fa:fa-server Cato Socket / Branch Connector]
+        Users[fa:fa-users 社内ユーザー]
+        Devices[fa:fa-print 複合機 / IoT]
         Users --> Edge
         Devices --> Edge
     end
 
     subgraph remote [那覇空港現場 / 自宅]
-        RemoteUser[リモートユーザー<br>Cato Client / ZCC]
+        RemoteUser[fa:fa-laptop リモートユーザー<br>Cato Client / ZCC]
     end
 
     subgraph datacenter [オービッククラウド / 社内システム]
-        App[業務アプリケーション]
-        Connector[IPsec / App Connector]
+        App[fa:fa-database 業務アプリケーション]
+        Connector[fa:fa-plug IPsec / App Connector]
         Connector --> App
     end
 
     subgraph internet [インターネット・SaaS]
-        SaaS[M365 / Adobe CC / ホットプロファイル]
-        Web[一般Webサイト]
+        SaaS[fa:fa-cloud M365 / Adobe CC / ホットプロファイル]
+        Web[fa:fa-globe 一般Webサイト]
     end
 
     Edge == インターネット回線 / 暗号化トンネル === FWaaS
